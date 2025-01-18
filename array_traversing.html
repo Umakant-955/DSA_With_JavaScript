@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 300px;
+        }
+        button{
+            background-color: green;
+            border-radius: 2px solid green;
+        }
+    </style>
+    <script>
+        var data=[25,28,17,16,35,40,60,85,18];
+
+        function btnClick(){
+            var txtValue=document.getElementById("txtValue").value;
+            if(txtValue<data.length && typeof parseInt(txtValue)==="number" && txtValue>0){
+                alert(data[txtValue]);
+            }else{
+                alert(" Invalid enter");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input id="txtValue" type="text"> <button onclick="btnClick()">Get Value</button>
+    </div>
+</body>
+</html>
