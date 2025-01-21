@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Inserting</title>
+    <script>
+        var data=[50,15,40,30,24];
+
+        function btnClick(){
+           var number=document.getElementById("txtValue").value;
+           var position=document.getElementById("txtPosition").value;
+           
+           for(var i=data.length-1; i>=0; i--){
+                if(i>=position){
+                    data[i+1]=data[i]
+                    if(i==position){
+                        data[i]=number;
+                        alert(data);
+                    }
+                }   
+           }  
+        }
+        
+    </script>
+</head>
+<body>
+    <diV>
+        
+        <p>[50,15,40,30,24]</p>
+        <input type="text" id="txtValue" placeholder="Enter a number">
+        <input type="text" id="txtPosition" placeholder="Enter position">
+        <button onclick="btnClick()">Get Result</button>
+        
+        
+    </diV>
+</body>
+</html>
